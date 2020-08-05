@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>project</title>
+    <meta charset="utf-8"> 
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+      .bg-1
+      {
+        margin-left: 35%;
+      }
+        .jumbotron
+         { 
+          background-color: #8080ff;
+          color: #ffffff;
+         }
+        
+        .label{
+            color: black;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-size: bold;
+        }
+        .button{
+            margin-left: 150px;
+        }
+         td {
+    text-align: left;   
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+h2{
+	background:black;
+ width: 100%;
+    text-align: center;
+    padding: 5px;  
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron text-center">
+      <h1 class="display-4"> PHYSIOTHERAPY CENTRE</h1>
+       <p class="lead">"Get Back Your Active Life"</p>
+    </div>
+  </div>
+  <h3 text align="center"><strong>BOOK APPOINTMENT</strong></h3>
+  <div class="bg-1 col-sm-4">
+    <div class="form-group">
+      <div class="form">
+        <form>
+          <br>
+          <div>
+            <label for="pid">Physiotherapist id:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="pid"  placeholder="Physiotherapist ID" required=""> 
+          </div><br>         
+          <div class="form-group">
+            <label for="pname">Physiotherapist name:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="text" class="form-control" id="pname" placeholder="Physiotherapist Name" required="">
+          </div><br>                   
+          <div class="form-group">
+            <label for="spec">Specialization:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+              <select class="form-control" id="spec" required="">
+                <option style="display:none" disabled selected value >Field of specialization:</option>
+                <option value="Physiotherapy">Physiotherapy</option>
+                <option value="Sport Injuries">Sport Injuries</option>
+                <option value="Cardio-Respiratory Physiotherapy">Cardio-Respiratory Physiotherapy</option>
+                <option value="Chiropractic">Chiropractic</option>
+                <option value="Acupunture">Acupunturey</option>0
+                <option value="Acupunture"></option>
+              </select>
+          </div><br>
+          <div class="form-group">
+            <label for="tpnum">Therapist Phone Number:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="tpnum" placeholder="Enter mobilenumber(9xxxxxxxxx)" required=""  max="9999999999">
+          </div><br>         
+          <div class="form-group">
+            <label for="npart">Rate<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="npart" placeholder="Enter Rate" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="enature">Patient Phone No:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="enature" placeholder="Enter Patient Phone No" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="ftype">Patient Name:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="text" class="form-control" id="ftype" placeholder="Enter Patient Name:" required="">
+          </div><br>                    
+          <div class="form-group">
+            <label for="ftimeframe">Problem Description:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="text" class="form-control" id="ftimeframe" placeholder="Problem Description" min="1" max="5" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="edate">Patient Age:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="edate" placeholder="Patient Age:" min="2" max="50" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="etime">Session Date:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="Date" class="form-control" id="etime" placeholder="Session Date(dd/mm/yy)" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="elocation">Session Strat Time:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="time" class="form-control" id="elocation" placeholder="Session Strat Time" required="">
+          </div><br>
+          <div class="form-group">
+            <label for="rate">Session End Time:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="time" class="form-control" id="rate" placeholder="Session End Time" required=" please enter this Field">
+          </div><br>
+          <div class="form-group">
+            <label for="followup">Session Cost:<span style="color: red; font-size:10px;" class="glyphicon glyphicon-asterisk"></span></label>
+            <input type="number" class="form-control" id="followup" placeholder="Session Cost" required="">
+          </div><br>                                       
+          <div class="form-group">
+            <label for="comment">Comments:</label>
+            <textarea class="form-control" type="textarea" id="comment" placeholder="your comments" maxlength="6000" rows="7" required=""></textarea> 
+          </div><br>  
+          <!--submit button-->
+          <div class="button" style="text-align: center;">
+            <button type="submit" class="btn btn-success" onclick="add();">Submit</button>
+          </div>                 
+        </form>
+      </div>    
+    </div>
+  </div>
+  <div class="modal-footer" >  
+    </div>
+  </div>
+</div>
+</div>
+
+<!--out put-->
+  <div id="records" class="container-fluid text-center" size>
+    <br>
+    <br>
+   <div class="container-fluid text-center">
+     <h2 style="color: white"><b>APPOINTMENTS<b></h2>
+      <div class="col-sm-12">
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Patient Name..">
+        <div class="row">
+         <table class="table" id="myTable" >     
+         <tr  class="header">
+         <th>Physiotherapist ID</th>
+         <th>Physiotherapist Name</th>
+         <th>Specialization</th>
+         <th>Therapist Phone Number:</th>
+         <th>Rate</th>
+         <th>Patient Phone no</th>
+         <th>Patient Name</th> 
+         <th>Problems</th>
+         <th>Patient Age</th>        
+         <th>Session date</th>
+         <th>Session Start Time</th>
+         <th>Session End Time</th>
+         <th>Session Cost</th>
+         <th>Comments</th>
+         </tr>
+       </table>
+     </div>
+   </div>
+ </div>
+  </div>
+
+<script type="text/javascript"> 
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++)
+   {
+    td = tr[i].getElementsByTagName("td")[6];
+    if (td)
+     {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1)
+       {
+        tr[i].style.display = "";
+      } 
+      else 
+      {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
+
+  <script>
+    function add()
+     {
+       var pid = document.getElementById('pid').value;
+       var pname= document.getElementById('pname').value;
+       var spec= document.getElementById('spec').value;
+       var tpnum=document.getElementById('tpnum').value;
+       var npart=document.getElementById('npart').value;
+       var enature=document.getElementById('enature').value;
+       var ftype=document.getElementById('ftype').value;
+       var ftimeframe=document.getElementById('ftimeframe').value;
+       var edate=document.getElementById('edate').value;
+       var etime=document.getElementById('etime').value;
+       var elocation=document.getElementById('elocation').value;
+       var rate=document.getElementById('rate').value;
+       var followup=document.getElementById('followup').value;
+       var comment=document.getElementById('comment').value;
+
+    var table = document.getElementsByTagName('table')[0];
+    
+    var n= table.insertRow(1);
+    var cel1=n.insertCell(0);
+    var cel2=n.insertCell(1);
+    var cel3=n.insertCell(2);
+    var cel4=n.insertCell(3);
+    var cel5=n.insertCell(4);
+    var cel6=n.insertCell(5);
+    var cel7=n.insertCell(6);
+    var cel8=n.insertCell(7);
+    var cel9=n.insertCell(8);
+    var cel10=n.insertCell(9);
+    var cel11=n.insertCell(10);
+    var cel12=n.insertCell(11);
+    var cel13=n.insertCell(12);
+    var cel14=n.insertCell(13);
+
+    cel1.innerHTML=pid;
+    cel2.innerHTML=pname;
+    cel3.innerHTML=spec;
+    cel4.innerHTML=tpnum;
+    cel5.innerHTML=npart;
+    cel6.innerHTML=enature;
+    cel7.innerHTML=ftype;
+    cel8.innerHTML=ftimeframe;
+    cel9.innerHTML=edate;
+    cel10.innerHTML=etime;
+    cel11.innerHTML=elocation;
+    cel12.innerHTML=rate;
+    cel13.innerHTML=followup;
+    cel14.innerHTML=comment;
+    }
+  </script>  
+
+</body>
+</html>

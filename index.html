@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+
+
+    <style type="text/css">
+        body,
+        html {
+            height: 100%;
+        }
+        .hero-image {           
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("img/background.jpg");         
+            height: 130%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero-text {
+            text-align: center;
+            font-weight: 150px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-family: cursive;
+
+            text-shadow: 2px 2px 3px #cccccc;
+            -webkit-text-stroke: 1px white;
+            color: silver;
+
+        }
+
+        .split {
+            margin-top: 380px;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            overflow-y: hidden;
+
+
+        }
+
+        .left {
+            left: 0;
+
+        }
+
+        .right {
+            right: 0;
+
+        }
+
+        .centered1 {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .centered2 {
+            position: absolute;
+            top: 50%;
+            left: 75%;
+
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .img1 img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        #btnc {
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 12px;
+        }
+
+        .btn-login {
+  background-color: #59B2E0;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+  color: #fff;
+  background-color: #53A3CD;
+  border-color: #53A3CD;
+}
+
+        .btn-register {
+  background-color: #1CB94E;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+  color: #fff;
+  background-color: #1CA347;
+  border-color: #1CA347;
+}
+
+        .text {
+  background-color: white;
+  color: black;
+  font-size: 100px; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 75%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 20%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div class="hero-image">
+        <div class="hero-text">            
+            <br>
+        </div>
+
+        <div class="split left">
+            <div class="centered1">
+                <div class="img1">
+                    <img src="img/login.png" alt="Login"></br>
+                </div>
+                <h2>Login / Booking Portal</h2>
+                </br>
+                <!-- Trigger the modal with a button -->
+                 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+                </div>
+                
+                  <!--modal-->
+                    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel"aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <!--modal content-->
+                        <div class="modal-content">
+                          <!--modal header-->
+                          <div class="modal-header text-center">
+                           <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+
+                          <!--modal body-->
+                          <div class="modal-body mx-3">
+                          
+                           <div class="md-form mb-5">
+                             <div class="form-group">
+                               <input type="text" id="usernameL" class="form-control" placeholder="Username" value="" required="">
+                             </div>
+                           </div>
+
+                           <div class="md-form mb-4">
+                             <div class="form-group">
+                              <input type="password" id="passwordL" class="form-control" placeholder="Password" 
+                              value="" required="">
+                              </div>
+                           </div>
+
+                          </div>
+
+                          <!--modal footer-->
+                          <div class="modal-footer d-flex justify-content-center">
+                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In"  onClick="check()">
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                </dir>
+
+
+        </div>
+
+        <div class="split right">
+            <div class="centered2">
+                <div class="img1">
+                    <img src="img/register.png" alt="SignUp">
+                </div>
+                <h2>SignUp Portal</h2>
+                </br>
+                <!-- Trigger the modal with a button -->
+                 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</button>
+               </div>
+                 
+                 <!--modal-->
+                 <div class="modal fade" id="modalRegisterForm" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                   <div class="modal-dialog" role="document">
+
+                    <!--modal content-->
+                    <div class="modal-content">
+                      <!--modal header-->
+                      <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <!--modal body-->
+                      <div class="modal-body mx-3">
+
+                        <div class="md-form mb-5">
+                          <div class="form-group">
+                            <input type="text" id="usernameR" class="form-control" placeholder="Username" value="" required="">
+                          </div>
+                        </div>
+
+                        <div class="md-form mb-4">
+                          <div class="form-group">
+                            <input type="password" id="passwordR" class="form-control" placeholder="Password" value="" required="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--modal footer-->
+                      <div class="modal-footer d-flex justify-content-center" >
+                        <input type="submit" id="register-submit" class="form-control btn btn-register" value="Register Now" onClick="store()">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+
+<div class="text">PHYSIOTHERAPY</div>
+
+<script type="text/javascript">
+  
+
+    // Name and Password from the register-form
+    var usernameR = document.getElementById('usernameR');
+        var passwordR = document.getElementById('passwordR');
+
+// storing input from register-form
+function store() {
+    localStorage.setItem('usernameR', usernameR.value);
+    localStorage.setItem('passwordR', passwordR.value);
+
+    if (usernameR.value == '' && passwordR.value =='') 
+    {
+        alert("entered all fields");
+    }
+
+    else 
+    {
+    alert("Go back and Login");
+    }
+}
+
+// check if stored data from register-form is equal to entered data in the   login-form
+function check() {
+
+    // stored data from the register-form
+    var storedusernameR = localStorage.getItem('usernameR');
+    var storedpasswordR = localStorage.getItem('passwordR');
+
+    // entered data from the login-form
+    var usernameL = document.getElementById('usernameL');
+    var passwordL = document.getElementById('passwordL');
+
+    // check if stored data from register-form is equal to data from login form
+    if(usernameL.value == storedusernameR && passwordL.value == storedpasswordR)
+     {
+        alert('You are logged in.');
+        window.open('main.html');
+        
+    }
+    else if (usernameL.value == '' && passwordL.value == '') 
+    {
+        alert('entered all fields');
+    }
+    else {
+        alert('ERROR. Check user name or password');
+    }
+}
+  
+</script>
+
+
+</body>
+
+</html>
